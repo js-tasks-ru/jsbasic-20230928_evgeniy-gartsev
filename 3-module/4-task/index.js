@@ -1,3 +1,10 @@
 function showSalary(users, age) {
-  // ваш код...
+  return users
+    .reduce((accum, item) => {
+      if (item.age <= age) {
+        accum.push(`${item.name}, ${item.balance}`);
+      }
+      return accum;
+    }, [])
+    .join("\n");
 }
