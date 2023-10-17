@@ -25,7 +25,7 @@ function highlight(table) {
     }
 
     if (Number(cells[1].innerHTML) < 18) {
-      row.style.textDecoration = 'line-through';
+      row.style.textDecoration = "line-through";
     }
   });
 }
