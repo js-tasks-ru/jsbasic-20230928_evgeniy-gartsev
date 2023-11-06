@@ -27,7 +27,7 @@ export default class StepSlider {
     let result = [];
     for (let i = 0; i < this._steps; i++) {
       const span = document.createElement("span");
-      if (i == this.value) {
+      if (i == this._value) {
         span.classList.add("slider__step-active");
       }
       result.push(span.outerHTML);
@@ -52,6 +52,7 @@ export default class StepSlider {
       }
       currentSegment += this.segmentWidth;
     }
+    return this._steps - 1;
   }
 
   applyStep(step) {
