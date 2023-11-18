@@ -133,11 +133,9 @@ export default class Cart {
       div.append(product);
     });
 
-    this.modal.modal.addEventListener("submit", event => this.onSubmit(event));
-
+    orderForm.addEventListener("submit", event => this.onSubmit(event));
     div.append(orderForm);
     this.modal.setBody(div);
-
     this.modal.open();
   }
 
